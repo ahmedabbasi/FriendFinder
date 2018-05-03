@@ -15,10 +15,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 // set up routes
-require('./routes/apiRoutes')(app);
-require('./routes/htmlRoutes')(app);
+require('./app/routing/apiRoutes')(app);
+require('./app/routing/htmlRoutes')(app);
 
 // listener
 app.listen(PORT, function() {
-  consiole.log("App listening on PORT: " + PORT)
+  console.log("App listening on PORT: " + PORT)
 });
